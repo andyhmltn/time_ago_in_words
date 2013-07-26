@@ -16,7 +16,7 @@ NodeJS
 --------------
 This script is compatible with NodeJS. To use it, you can install the package from NPM: `npm install time_ago_in_words` then use it like so:
 
-    var time_ago_in_words = require('./time_ago_in_words');
+    var time_ago_in_words = require('time_ago_in_words');
 
     console.log(time_ago_in_words(new Date() - 1000 * 60));
 
