@@ -55,5 +55,6 @@ var time_ago_in_words = function (ts) {
 };
 
 // Node.JS exports
-if(typeof module == 'undefined') module = {}
-module.exports = time_ago_in_words;
+if(typeof module != 'undefined') {
+  module.exports = time_ago_in_words;
+}
