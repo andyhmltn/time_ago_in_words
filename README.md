@@ -18,3 +18,7 @@ This script is compatible with NodeJS. To use it, you can install the package fr
   var time_ago_in_words = require('./time_ago_in_words');
 
   console.log(time_ago_in_words(new Date() - 1000 * 60));
+
+Testing
+--------------
+This package uses `mocha` as a test framework. To use it, make sure you've run `npm install` and run the command: `make test`

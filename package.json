@@ -6,6 +6,9 @@
   "keywords":[
     "timestamp","time","time ago","time_ago_in_words"
   ],
+  "devDependencies":{
+    "mocha":">= 1.12.0"
+  },
   "repository":{
     "type":"git",
     "url":"https://github.com/andyhmltn/time_ago_in_words.git"
