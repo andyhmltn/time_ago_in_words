@@ -22,3 +22,5 @@ This script is compatible with NodeJS. To use it, you can install the package fr
 Testing
 --------------
 This package uses `mocha` as a test framework. To use it, make sure you've run `npm install` and run the command: `make test`
+
+![NPM Badge](https://nodei.co/npm/time_ago_in_words.png?compact=true)
