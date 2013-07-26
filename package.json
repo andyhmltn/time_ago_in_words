@@ -1,0 +1,13 @@
+{
+  "name":"time_ago_in_words",
+  "version":"0.0.2",
+  "description":"A simple function that takes a timestamp and returns the time period between then and now in words (eg: '15 minutes ago')",
+  "main":"time_ago_in_words.js",
+  "keywords":[
+    "timestamp","time","time ago","time_ago_in_words"
+  ],
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/andyhmltn/time_ago_in_words.git"
+  }
+}
