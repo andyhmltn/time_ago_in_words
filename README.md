@@ -1,5 +1,6 @@
 time_ago_in_words
 =================
+[![Build Status](https://travis-ci.org/andyhmltn/time_ago_in_words.png)](https://travis-ci.org/andyhmltn/time_ago_in_words)
 
 A simple function that takes a timestamp and returns the time period between then and now in words (eg: '15 minutes ago')
 
