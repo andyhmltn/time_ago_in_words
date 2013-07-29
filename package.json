@@ -10,7 +10,7 @@
     "mocha":">= 1.12.0"
   },
   "scripts":{
-    "test":"mocha"
+    "test":"mocha --reporter spec --colors"
   },
   "repository":{
     "type":"git",
