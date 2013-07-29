@@ -34,7 +34,7 @@ var time_ago_in_words = function (ts) {
     if (difference > 30) {
       return_string = '1 minute ago';
     } else {
-      return_string = 'Less than one minute ago';
+      return_string = 'Just now';
     }
     return return_string;
   }

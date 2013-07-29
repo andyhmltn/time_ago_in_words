@@ -7,8 +7,8 @@ describe("time_ago_in_words", function() {
     assert.equal(time_ago_in_words(new Date() - 1000 * 60), '1 minute ago');
   });
 
-  it("Displays 'Less than one minute ago' when the value is less than 30 seconds", function() {
-    assert.equal(time_ago_in_words(new Date() - 1000), 'Less than one minute ago');
+  it("Displays 'Just now' when the value is less than 30 seconds", function() {
+    assert.equal(time_ago_in_words(new Date() - 1000), 'Just now');
   });
 
   it("Displays 'One minute ago' when the time is 1 and 1.5 minutes", function() {
