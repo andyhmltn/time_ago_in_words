@@ -1,6 +1,6 @@
 {
   "name":"time_ago_in_words",
-  "version":"1.0.3",
+  "version":"1.1.0",
   "description":"A simple function that takes a timestamp and returns the time period between then and now in words (eg: '15 minutes ago')",
   "main":"time_ago_in_words.js",
   "keywords":[

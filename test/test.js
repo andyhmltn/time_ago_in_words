@@ -31,4 +31,8 @@ describe("time_ago_in_words", function() {
     assert.notEqual(time_ago_in_words(date - week).indexOf('week'), -1)
     assert.notEqual(time_ago_in_words(date - month).indexOf('month'), -1)
   })
+
+  it("Returns seconds if the second parameter is false", function() {
+    assert.notEqual(time_ago_in_words(date - 1000 * 50, false).indexOf('seconds'), -1)
+  })
 })

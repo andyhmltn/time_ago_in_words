@@ -16,8 +16,10 @@ var time_ago_in_words
      http://css-tricks.com/snippets/php/time-ago-function/
 */
 
-var time_ago_in_words = function (ts) {
+var time_ago_in_words = function (ts, just_now) {
   var from, to, difference, periods, lengths, tense, i, period
+
+  just_now = (typeof just_now != 'undefined') ? just_now : true
 
   from = new Date(ts)
   to   = new Date()
@@ -29,7 +31,7 @@ var time_ago_in_words = function (ts) {
 
   tense   = 'ago'
 
-  if (difference < 60)
+  if (difference < 60 && just_now)
     return (difference > 30) ? '1 minute ago' : 'Just now'
 
   for (i = 0; difference >= lengths[i] && i < lengths.length; i++) {
