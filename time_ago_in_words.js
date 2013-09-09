@@ -26,7 +26,7 @@ var time_ago_in_words = function (ts, just_now) {
 
   difference = Math.abs(to - from) / 1000
 
-  periods = ['seconds', 'minute', 'hour', 'day', 'week', 'month', 'year']
+  periods = ['second', 'minute', 'hour', 'day', 'week', 'month', 'year']
   lengths = [60, 60, 24, 7, 4.35, 12]
 
   tense   = 'ago'

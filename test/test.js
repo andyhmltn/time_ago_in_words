@@ -18,7 +18,7 @@ describe("time_ago_in_words", function() {
   })
 
   it("Correctly pluralises any value over 1", function() {
-    assert.notEqual(time_ago_in_words(date - 1000 * 95).indexOf('minutes'), -1)
+    assert.notEqual(time_ago_in_words(date - 1000 * 95).indexOf('minutes '), -1)
   })
 
   it("Displays Hours/Days/Weeks/Months correctly", function() {
@@ -33,6 +33,6 @@ describe("time_ago_in_words", function() {
   })
 
   it("Returns seconds if the second parameter is false", function() {
-    assert.notEqual(time_ago_in_words(date - 1000 * 50, false).indexOf('seconds'), -1)
+    assert.notEqual(time_ago_in_words(date - 1000 * 50, false).indexOf('seconds '), -1)
   })
 })
