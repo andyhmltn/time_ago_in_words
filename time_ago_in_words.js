@@ -1,4 +1,4 @@
-var time_ago_in_words;
+var time_ago_in_words
 
 /* time_ago_in_words method based on ActionView's helper of the same name
      see the following for more information
@@ -17,44 +17,44 @@ var time_ago_in_words;
 */
 
 var time_ago_in_words = function (ts) {
-  var from, to, difference, return_string, periods, lengths, tense, i;
+  var from, to, difference, return_string, periods, lengths, tense, i
 
-  from = new Date(ts);
-  to   = new Date();
+  from = new Date(ts)
+  to   = new Date()
 
-  difference = Math.abs(to - from) / 1000;
-  return_string = '';
+  difference = Math.abs(to - from) / 1000
+  return_string = ''
 
-  periods = ['seconds', 'minute', 'hour', 'day', 'week', 'month', 'year'];
-  lengths = [60, 60, 24, 7, 4.35, 12];
+  periods = ['seconds', 'minute', 'hour', 'day', 'week', 'month', 'year']
+  lengths = [60, 60, 24, 7, 4.35, 12]
 
-  tense   = 'ago';
+  tense   = 'ago'
 
   if (difference < 60) {
     if (difference > 30) {
-      return_string = '1 minute ago';
+      return_string = '1 minute ago'
     } else {
-      return_string = 'Just now';
+      return_string = 'Just now'
     }
-    return return_string;
+    return return_string
   }
 
   for (i = 0; difference >= lengths[i] && i < lengths.length; i++) {
-    difference /= lengths[i];
+    difference /= lengths[i]
   }
 
-  difference = Math.round(difference);
+  difference = Math.round(difference)
 
   if (difference !== 1) {
-    periods[i] += 's';
+    periods[i] += 's'
   }
 
-  return_string = difference + ' ' + periods[i] + ' ' + tense;
+  return_string = difference + ' ' + periods[i] + ' ' + tense
 
-  return return_string;
-};
+  return return_string
+}
 
 // Node.JS exports
 if(typeof module != 'undefined') {
-  module.exports = time_ago_in_words;
+  module.exports = time_ago_in_words
 }
