@@ -1,18 +1,23 @@
-/* time_ago_in_words method based on ActionView's helper of the same name
-     see the following for more information
-     http://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-time_ago_in_words
-   
-   It works by cycling through all the periods and providing the difference (`today` - `ts`) is more than
-     that position in `lengths` it divides the difference by that same length until the conditions are no
-     longer met when it then returns the full string.
-     
-   This method allows for easy expansion of the current periods ['second', 'minute' ... ] etc. Just add
-     one to `periods` and add the length of the previous period (eg for decades, it would be 10 years)
-     to `lengths`.
+// The MIT License (MIT)
 
-   The original PHP function that was converted over to JS can be found over @ css-tricks:
-     http://css-tricks.com/snippets/php/time-ago-function/
-*/
+// Copyright (c) 2013 Andy Hamlton
+
+// Permission is hereby granted, free of charge, to any person obtaining a copy of
+// this software and associated documentation files (the "Software"), to deal in
+// the Software without restriction, including without limitation the rights to
+// use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+// the Software, and to permit persons to whom the Software is furnished to do so,
+// subject to the following conditions:
+
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+// FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+// COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+// IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+// CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 var time_ago_in_words = function (ts, just_now) {
   var from, to, difference, periods, lengths, tense, i, period
