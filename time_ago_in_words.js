@@ -40,7 +40,7 @@ var time_ago_in_words = function (ts) {
 
   period = (difference !== 1) ? periods[i] + 's' : periods[i]
 
-  return difference + ' ' + period + ' ' + tense
+  return [difference, period, tense].join(' ')
 }
 
 // Node.JS exports
