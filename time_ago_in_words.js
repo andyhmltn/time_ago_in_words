@@ -1,5 +1,3 @@
-var time_ago_in_words
-
 /* time_ago_in_words method based on ActionView's helper of the same name
      see the following for more information
      http://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-time_ago_in_words
