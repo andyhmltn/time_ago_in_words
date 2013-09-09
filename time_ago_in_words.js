@@ -17,27 +17,20 @@ var time_ago_in_words
 */
 
 var time_ago_in_words = function (ts) {
-  var from, to, difference, return_string, periods, lengths, tense, i
+  var from, to, difference, periods, lengths, tense, i, period
 
   from = new Date(ts)
   to   = new Date()
 
   difference = Math.abs(to - from) / 1000
-  return_string = ''
 
   periods = ['seconds', 'minute', 'hour', 'day', 'week', 'month', 'year']
   lengths = [60, 60, 24, 7, 4.35, 12]
 
   tense   = 'ago'
 
-  if (difference < 60) {
-    if (difference > 30) {
-      return_string = '1 minute ago'
-    } else {
-      return_string = 'Just now'
-    }
-    return return_string
-  }
+  if (difference < 60)
+    return (difference > 30) ? '1 minute ago' : 'Just now'
 
   for (i = 0; difference >= lengths[i] && i < lengths.length; i++) {
     difference /= lengths[i]
@@ -45,13 +38,9 @@ var time_ago_in_words = function (ts) {
 
   difference = Math.round(difference)
 
-  if (difference !== 1) {
-    periods[i] += 's'
-  }
+  period = (difference !== 1) ? periods[i] + 's' : periods[i]
 
-  return_string = difference + ' ' + periods[i] + ' ' + tense
-
-  return return_string
+  return difference + ' ' + period + ' ' + tense
 }
 
 // Node.JS exports
